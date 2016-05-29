@@ -1,0 +1,37 @@
+digraph g {
+
+  graph [compound = true];
+
+  //presentation
+  splines = true;
+  overlap = false;
+  rankdir = LR;
+
+  //entities
+  user [shape="box"];
+  group [shape="box"];
+  place [shape="box"];
+  route [shape="box"];
+
+  // system entities
+  user -> group [label="isMember"];
+  group -> user [label="hasMember"];
+
+  // user entity
+  user -> route [label="isCreator"];
+  user -> route [label="isMember"];
+  user -> route [label="isOwner"];
+  route -> user [label="hasCreator"];
+  route -> user [label="hasMember"];
+  route -> user [label="hasOwner"];
+
+  // route entity
+  route -> place [label="hasOrigin"];
+  route -> place [label="hasWaypoint"];
+  route -> place [label="hasDestination"];
+  place -> route [label="isOrigin"];
+  place -> route [label="isWaypoint"];
+  place -> route [label="isDestination"];
+
+
+}

@@ -1,0 +1,37 @@
+digraph g {
+
+  graph [compound = true];
+
+  //presentation
+  splines = true;
+  overlap = false;
+  rankdir = LR;
+
+  //entities
+  user [shape="box"];
+  group [shape="box"];
+  place [shape="box"];
+  route [shape="box"];
+
+  // system activities
+  user -> join -> group;
+  user -> leave -> group;
+
+  // user activities
+  user -> post -> note, route [style="dashed"];
+  user -> create -> route;
+  user -> schedule -> route;
+
+  // owner activities
+  user -> cancel -> route;
+  user -> update -> route;
+  user -> invite -> user, route [style="dashed"];
+  user -> give -> route, user [style="dashed"];
+
+  // application activities
+  user -> checkin -> place;
+  user -> leave -> place;
+  user -> complete -> route;
+  user -> attend -> route;
+
+}
