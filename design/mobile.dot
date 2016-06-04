@@ -7,14 +7,14 @@ digraph g {
   overlap = false;
   rankdir = LR;
 
-  login
-  signup
+  login -> signup
+  signup -> login -> findroute
   password
 
-  findroute
-  createroute
+  findroute -> createroute
+  createroute -> viewroute
   manageroute
 
-  viewroute
+  viewroute -> manageroute
   
 }
