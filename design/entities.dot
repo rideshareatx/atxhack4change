@@ -33,5 +33,8 @@ digraph g {
   place -> route [label="isWaypoint"];
   place -> route [label="isDestination"];
 
-
+  ride -> route [label="instanceOf"];
+  ride -> user [label="isDriver"];
+  ride -> user [label="isRider"];
+  
 }

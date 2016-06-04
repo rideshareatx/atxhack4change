@@ -1,0 +1,32 @@
+digraph g {
+
+  graph [compound = true];
+
+  //presentation
+  splines = true;
+  overlap = false;
+  rankdir = LR;
+
+  login
+  signup
+  password
+
+  auth
+  home
+  feeds
+  routes
+
+  login -> home
+  home -> feeds
+  home -> routes
+
+  findroute
+  createroute
+  manageroute
+
+  manageusers
+  managegroups
+
+  places
+
+}

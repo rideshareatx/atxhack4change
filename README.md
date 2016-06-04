@@ -30,13 +30,31 @@ Entity Properties
 * Route.active : boolean
 * Route.origin : Place
 * Route.waypoint : Place
+* Route.destionation : Place
+
+* Ride.driver : User
+* Ride.rider : User
+* Ride.plannedStartTime : DateTime
+* Ride.actualDeparture : DateTime
+* Ride.plannedEndTime : DateTime
+* Ride.actualArrival : DateTime
 
 Entity Diagram
 ==============
 
-![entities.dot.svg](entities.dot.svg "entities.dot.svg")
+<img src="design/entities.dot.svg"/>
 
 Activity Diagram
 ================
 
-![activities.dot.svg](activities.dot.svg "activities.dot.svg")
+<img src="design/activities.dot.svg"/>
+
+Web UX Diagram
+================
+
+<img src="design/web.dot.svg"/>
+
+Mobile UX Diagram
+================
+
+<img src="design/mobile.dot.svg"/>

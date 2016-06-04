@@ -31,7 +31,10 @@ digraph g {
   // application activities
   user -> checkin -> place;
   user -> leave -> place;
-  user -> complete -> route;
-  user -> attend -> route;
+  user -> complete -> ride;
+  user -> attend -> ride;
+
+  ride -> depart -> place;
+  ride -> arrive -> place;
 
 }
