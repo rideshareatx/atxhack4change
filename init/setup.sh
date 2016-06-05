@@ -1,21 +1,31 @@
 # launch cassandra
+docker run --net=host --name cassandra -d cassandra:2.1.14
 
 # launch elasticsearch
-
-# build usergrid-stack
-
-# docker build stack
+docker run --net=host --name elasticsearch -d elasticsearch:1.7.5
 
 # launch usergrid-stack
+docker run --name usergrid-stack -p 8080:8080 -d rideshareatx/usergrid-stack
 
-# initialize.sh
+# configure facebook authentication
 
-# build usergrid-portal
+# configure ios push notifications
 
-# docker build portal
+# configure android push notifications
 
-# launch portal
+# launch usergrid-portal
+docker run --name usergrid-portal -p 5000:8080 -d rideshareatx/usergrid-portal
 
-# login as admin
+# login to portal as admin
+http://localhost:
 
-# demo.sh
+# create an organization
+
+# create an application
+
+# generate a usergrid token
+
+# launch web-app
+docker run --name web-app -p 3000:3000 -d rideshareatx/usergrid-portal
+
+
